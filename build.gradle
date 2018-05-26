@@ -1,0 +1,43 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        maven { url 'https://maven.google.com' }
+        jcenter()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.1.2'
+        classpath 'com.dicedmelon.gradle:jacoco-android:0.1.2'
+    }
+}
+
+allprojects {
+    repositories {
+        maven { url 'https://maven.google.com' }
+        jcenter()
+        mavenCentral()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+ext {
+    // SDK
+    minSdkVersion = 14
+    targetSdkVersion = 27
+    compileSdkVersion = 27
+    buildToolsVersion = '27.0.3'
+
+    // Dependencies
+    supportVersion = '27.0.2'
+    constraintLayoutVersion = '1.0.2'
+    archVersion = '1.0.0'
+    junitVersion = '4.12'
+    mockitoVersion = '2.0.42-beta'
+    vollyVersion='1.0.0'
+    powermockVersion = '1.6.5'
+}
