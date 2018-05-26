@@ -66,8 +66,8 @@ public class CategoriesFragmentViewModal extends BaseViewModal<CategoriesFragmen
         .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(categoriesOuterEntity -> {
-                            mView.updateCategories(categoryEntityToViewModelMapper.mapCategoryEntityToCategoryViewModel(categoriesOuterEntity));
-//                            mObservableData.get(0).setValue(categoryEntityToViewModelMapper.mapCategoryEntityToCategoryViewModel(categoriesOuterEntity));
+//                            mView.updateCategories(categoryEntityToViewModelMapper.mapCategoryEntityToCategoryViewModel(categoriesOuterEntity));
+                            mObservableData.get(0).setValue(categoryEntityToViewModelMapper.mapCategoryEntityToCategoryViewModel(categoriesOuterEntity));
                         },
                         throwable -> {
                             throwable.printStackTrace();
